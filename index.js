@@ -46,6 +46,14 @@ client.connect(err => {
     })
 });
 
+client.connect(err => {
+    const productsCollection = client.db("ema-john").collection("orders");
+
+    app.post('/order', (req, res) =>{
+        console.log(req.body)
+    })
+
+})
 
 
 
